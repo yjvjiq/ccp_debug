@@ -56,7 +56,9 @@ void delay10usHc595(void)
 //******************************************************
 void InitialHc595(void) 
 {
-    DDRA |= 0x1c;  //设置PA2,PA3为输出口        
+    DDRA |= 0x1c;  //设置PA2,PA3为输出口       
+    PORTA &= 0xE3; 
+    TurnOff_ALL();
 }
 //******************************************************
 //* Function name:   Write_Hc595

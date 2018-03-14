@@ -39,11 +39,11 @@ void main(void)
 	
 	COPCTL |=0x07; //看门狗初始化，分频时钟为2的24次方; 大约2秒钟
 	
+	InitialHc595(); //Relay初始化 
 	gpioInit(); //IO port initialize
 	ADCInitial(); //ADC初始化
 	ads1015_init();
 	read_adc_config();
-	InitialHc595(); //Relay初始化 
 	MSCANInit();  //CAN初始化
 	PIT0_Init();
 	RTIInit();  //设置定时器间隔时间

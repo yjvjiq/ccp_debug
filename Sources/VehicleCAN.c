@@ -70,8 +70,9 @@ STATUS_GROUP2 status_group2;
 STATUS_GROUP3 status_group3;
 STATUS_GROUP4 status_group4;
 
-#define CAN_BMS_TMS_ID 0X18FF45F3
-
+#define CAN_BMS_TMS_ID	0X18FF45F3
+#define CCP_DTO_ID		0x101         /* CAN identifier ECU -> Master */
+#define C		0x100         /* CAN identifier Master -> ECU */
 
 /*futon Logistics use end*/
 

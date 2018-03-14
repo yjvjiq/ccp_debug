@@ -88,7 +88,7 @@ void InitialBMS(void)
 {
     unsigned char SetTime[7];
     	
-    TurnOff_ALL();// Turn off all relays. then check their state.
+    //TurnOff_ALL();// Turn off all relays. then check their state.
     
     status_group1.Bit.St_BMS = 3;           //高压断开  上电发无效值
     status_group2.Bit.St_Ele_Relay = 1;     //受电弓继电器未连接

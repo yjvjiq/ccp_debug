@@ -780,14 +780,13 @@ CCP_BYTE ccpBackground( void ) {
 /*--------------------------------------------------------------------------*/
 
 void ccpCommand( CCP_BYTEPTR com ) {
-
   SET_PORT_BIT(1); /* Timingtest */
 
   #define cmd com[0]
   #define ctr com[1]
 
   /* Handle CONNECT or TEST command */
-  if (cmd==CC_CONNECT||cmd==CC_TEST) {
+  if(cmd==CC_CONNECT||cmd==CC_TEST) {
 
     #define stationAddr (*(CCP_WORD*)&com[2]) /* Has to be Intel-Format ! */
 
@@ -796,7 +795,7 @@ void ccpCommand( CCP_BYTEPTR com ) {
     #endif
 
     /* This station */
-    if (stationAddr==CCP_STATION_ADDR||stationAddr==CCP_BROADCAST_STATION_ADDR) { /* This station */
+    if(stationAddr==CCP_STATION_ADDR||stationAddr==CCP_BROADCAST_STATION_ADDR) { /* This station */
 
       if (cmd==CC_CONNECT) {
         #ifdef CCP_DAQ
@@ -1318,7 +1317,7 @@ void ccpCommand( CCP_BYTEPTR com ) {
           #endif
           ((ccpBootLoader_t)ccp.MTA[0])(&ccp,com);
         }
-        break;
+        break
 
       #endif /* CCP_BOOTLOADER_DOWNLOAD */
                            

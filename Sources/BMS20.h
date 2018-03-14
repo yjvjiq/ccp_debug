@@ -145,6 +145,8 @@
 #include "Q1.h"
 #include "CellTempUnbalance.h"
 #include "YoungMan_LT.h"
+#include "boot_can.h"
+#include "CCP.h"
 
 //#include "Isolation.h"
 //*******************************************

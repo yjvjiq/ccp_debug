@@ -539,13 +539,13 @@ void Task21_CAN_SendGouup1(void)
     mg.id = CANID_BMNVPN;
     
     mg.data[0]=(unsigned char)(Vpn1_Voltage_CAL_Value>>8);
-    mg.data[1]=(unsigned char)Vpn1_Voltage_CAL_Value;
+    mg.data[1]=(unsigned char)(Vpn1_Voltage_CAL_Value);
     mg.data[2]=(unsigned char)(Vpn2_Voltage_CAL_Value>>8); 
-    mg.data[3]=(unsigned char)Vpn2_Voltage_CAL_Value;  
+    mg.data[3]=(unsigned char)(Vpn2_Voltage_CAL_Value);  
     mg.data[4]=(unsigned char)(Vpn3_Voltage_CAL_Value>>8); 
-    mg.data[5]=(unsigned char)Vpn3_Voltage_CAL_Value;
+    mg.data[5]=(unsigned char)(Vpn3_Voltage_CAL_Value);
     mg.data[6]=(unsigned char)(Vpn1_Voltage_AD_Value>>8);  
-    mg.data[7]=Vpn1_Voltage_AD_Value; 
+    mg.data[7]=(unsigned char)(Vpn1_Voltage_AD_Value); 
    // Sends a data frame message
     MSCAN2SendMsg(mg);
    
@@ -566,8 +566,8 @@ void Task22_CAN_SendGouup2(void)
     mg.prty = 0;
     // RP Rn To Gnd
     
-    buff1 = Rp_Vpn_Value;
-    buff2 = Rn_Vpn_Value;
+    buff1 = (unsigned int)Rp_Vpn_Value;
+    buff2 = (unsigned int)Rn_Vpn_Value;
      
     mg.id = CANID_RPNTOGND;
 	

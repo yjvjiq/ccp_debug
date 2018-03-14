@@ -66,7 +66,7 @@ extern void enable_interrupt(void);
 /* CCP Data Acuisition Parameters */
 
 #define CCP_DAQ                     /* Enable synchronous data aquisition in ccpDaq() */
-#define CCP_MAX_ODT 0x10               /* Number of ODTs in each DAQ lists */
+#define CCP_MAX_ODT 0x10            /* Number of ODTs in each DAQ lists */
 #define CCP_MAX_DAQ 3               /* Number of DAQ lists */
 
 
